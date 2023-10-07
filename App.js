@@ -8,8 +8,8 @@ import {
   Modal,
   Pressable,
 } from "react-native";
-import GoalInput from "./components/GoalInput";
-import GoalItem from "./components/GoalItem";
+import GoalInput from "./Components/GoalInput";
+import GoalItem from "./Components/GoalItem";
 import TitleText from "./components/TitleText";
 
 export default function App() {

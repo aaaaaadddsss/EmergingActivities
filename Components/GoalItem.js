@@ -1,9 +1,17 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, TouchableOpacity, Modal, Pressable } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Modal,
+  Pressable,
+} from "react-native";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 function GoalItem(props) {
-  const [deleteConfirmationModalVisible, setDeleteConfirmationModalVisible] = useState(false);
+  const [deleteConfirmationModalVisible, setDeleteConfirmationModalVisible] =
+    useState(false);
 
   function onDeleteIconPress() {
     setDeleteConfirmationModalVisible(true);
@@ -22,7 +30,7 @@ function GoalItem(props) {
     <View style={styles.goalItem}>
       <Text style={styles.textGoal}>{props.text}</Text>
       <TouchableOpacity onPress={onDeleteIconPress}>
-        <DeleteIcon styles={styles.icon} />
+        <DeleteIcon styles={styles.icon}/>
       </TouchableOpacity>
       <Modal
         animationType="fade"
@@ -32,7 +40,9 @@ function GoalItem(props) {
       >
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
-            <Text style={styles.modalText}>Are you sure you want to delete this goal?</Text>
+            <Text style={styles.modalText}>
+              Are you sure you want to delete this goal?
+            </Text>
             <Pressable
               style={[styles.button, styles.buttonDelete]}
               onPress={onDeleteConfirmed}
@@ -68,9 +78,8 @@ const styles = StyleSheet.create({
     color: "black",
   },
   icon: {
-    width: 50,
-    height: 50,
-    color: "black",
+    width: 20,
+    height: 20,
   },
   modalContainer: {
     flex: 1,
